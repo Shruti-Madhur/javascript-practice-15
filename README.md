@@ -1,0 +1,3 @@
+# javascript-practice-15
+
+Practicing vanila javascript...

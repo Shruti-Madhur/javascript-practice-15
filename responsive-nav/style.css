@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root{
+    --roboto: "Roboto", sans-serif;
+    --open-sans: "Open Sans", sans-serif;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--open-sans);
+    background-image: url(./random_discord.svg);
+    background-color: hsl(100, 50%, 95%);
+    color: hsl(209, 61%, 16%);
+    line-height: 1.5;
+    font-size: .9rem;
+}
+
+nav{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: aliceblue;
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.logo{
+    height: 40px;
+}
+
+.nav-toggle{
+    border-color: transparent;
+    background: transparent;
+    font-size: 1.5rem;
+    color: #89badf;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.nav-toggle:hover{
+    color: #103b5c;
+    transform: rotate(90deg);
+}
+
+.social-links{
+    display: none;
+}
+
+.links a{
+    color:#5caae6;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+}
+
+.links a:hover{
+    background-color: #89badf;
+    color: #103b5c;
+    padding-left: 1.5rem;
+}
+
+.links{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.show-links{
+    height: 10rem;
+}
+
+@media screen and (min-width: 800px){
+    .nav-center{
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .nav-header{
+        padding: 0;
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+
+    .links{
+        height: auto;
+        display: flex;
+    }
+
+    .links a{
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+
+    .links a:hover{
+        padding: 0;
+        background: transparent;
+    }
+
+    .social-links{
+        display: flex;
+    }
+
+    .social-links a{
+        margin: 0 0.5rem;
+        color:#89badf;
+        transition: all 0.3s linear;
+    }
+    .social-links a:hover{
+        color: #103b5c;
+    }
+}
